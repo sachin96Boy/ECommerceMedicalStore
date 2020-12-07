@@ -130,3 +130,7 @@ img.medium{
   color: darkgoldenrod;
   margin: 0.1rem;
 }
+
+.rating span:last-child{
+  color: black;
+}
