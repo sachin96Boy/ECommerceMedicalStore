@@ -8,14 +8,14 @@ function App() {
 
       <header className="row">
         <div>
-          <a className="brand" href="index.html">Harshana Medicare</a>
+          <a className="brand" href="/">Harshana Medicare</a>
         </div>
 
 
         <div>
 
-          <a href="Cart.html">Cart</a>
-          <a href="Signin.html">Sign In</a>
+          <a href="Cart">Cart</a>
+          <a href="Signin">Sign In</a>
         </div>
 
       </header>
@@ -26,11 +26,11 @@ function App() {
             prodData.products.map((product) => (
               <div key={product._id} className="card">
 
-                <a href={'/product/${product._id}'}>
+                <a href={'/product/product._id'}>
                   <img className="medium" src={product.image} alt={product.name} />
                 </a>
                 <div className="card-body">
-                  <a href={'/product/${product._id}'}>
+                  <a href={'/product/product._id'}>
                     <h2>{product.name}</h2>
                   </a>
                   <div className="rating">
