@@ -1,50 +1,47 @@
 import React from 'react';
-import prodData from './data';
-import Product from './components/Product';
+import { BrowserRouter, Route } from 'react-router-dom';
+import ProductScreen from './screens/ProductScreen';
+import HomeScreen from './screens/HomeScreen';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function App() {
   return (
+    <BrowserRouter>
+      <div className="grid-container">
 
-    <div className="grid-container">
-
-      <header className="row">
-        <div>
-          <a className="brand" href="/">Harshana Medicare</a>
-        </div>
+        <header className="row ">
+          <div>
+            <a className="navbar brand" href="/">Harshana Medicare</a>
+          </div>
 
 
-        <div>
+          <div>
 
-          <a href="Cart">Cart</a>
-          <a href="Signin">Sign In</a>
-        </div>
+            <a className="btn btn-outline-success btn-lg  btn btn-link" href="Cart"><h3>Cart</h3></a>
+            <a className="btn btn-outline-succes btn-lg  btn btn-link" href="Signin"><h3>Sign In</h3></a>
+          </div>
 
-      </header>
-
-      <main>
-        <div className="row center">
-          {
-            prodData.products.map((product) => (
-              <Product key={product._id} product = {product}> </Product>
-                  )
-              )
-          }
+        </header>
 
 
 
+          <main>
+            <Route path="/product/:id" component={ProductScreen}></Route>
+            <Route path="/" component={HomeScreen} exact></Route>
 
-        </div>
 
 
-      </main>
+          </main>
 
-      <footer className="row center">
+          <footer className="row center">
 
-        Contact Us On FACEBOOK
+           <h2> Contact Us On FACEBOOK</h2>
       </footer>
-    </div>
+        </div>
+    </BrowserRouter>
 
 
   );

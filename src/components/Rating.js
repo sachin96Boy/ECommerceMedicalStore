@@ -21,7 +21,7 @@ export default function Rating(props) {
             </span>
 
             <span>
-                {numReviews + " Reviews"}
+               <h5> {numReviews + " Reviews"} </h5>
             </span>
         </div>
     )
