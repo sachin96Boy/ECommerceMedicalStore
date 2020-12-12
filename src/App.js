@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -12,16 +12,16 @@ function App() {
     <BrowserRouter>
       <div className="grid-container">
 
-        <header className="row ">
+        <header className="row">
           <div>
-            <a className="navbar brand" href="/">Harshana Medicare</a>
+            <a className="brand" href="/">Harshana Medicare</a>
           </div>
 
 
           <div>
 
-            <a className="btn btn-outline-success btn-lg  btn btn-link" href="Cart"><h3>Cart</h3></a>
-            <a className="btn btn-outline-succes btn-lg  btn btn-link" href="Signin"><h3>Sign In</h3></a>
+            <a href="Cart"><h3>Cart</h3></a>
+            <a href="Signin"><h3>Sign In</h3></a>
           </div>
 
         </header>
