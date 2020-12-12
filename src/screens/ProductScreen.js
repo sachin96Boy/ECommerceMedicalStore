@@ -21,7 +21,7 @@ export default function ProductScreen(props) {
             <Link to="/">Back To Home</Link>
         
             
-            <div className="raw top">
+            <div className="row top">
                 <div className="col-2">
                     <img className="large" src={product.image} alt={product.name}></img>
                 </div>
