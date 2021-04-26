@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
 import CartScren from './screens/CartScren';
-import { useSelector } from 'react-redux';
 
 
 
@@ -26,12 +27,12 @@ function App() {
 
           <div>
 
-            <Link to="Cart">Cart
+            <Link to="/cart">Cart
             {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
-            <Link to="Signin">Sign In</Link>
+            <Link to="/Signin">Sign In</Link>
           </div>
 
         </header>
